@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="empresa")
+@Table(name = "empresa")
 public class Empresa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -25,8 +26,10 @@ public class Empresa {
     @NotBlank
     private String horario;
 
-    private String logo;
+    @Column(name = "logo_path") // Asegúrate de que el nombre coincida con el de la base de datos
+    private String logoPath;
 
+    // Getters y setters
     public long getId() {
         return id;
     }
@@ -75,11 +78,11 @@ public class Empresa {
         this.horario = horario;
     }
 
-    public String getLogo() {
-        return logo;
+    public String getLogoPath() {
+        return logoPath;
     }
 
-    public void setLogo(String logo) {
-        this.logo = logo;
+    public void setLogoPath(String logoPath) {
+        this.logoPath = logoPath;
     }
 }
