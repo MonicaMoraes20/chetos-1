@@ -8,5 +8,6 @@ public interface ProductoService {
     Producto findById(long id);
 
     Producto save(Producto producto);
+    Producto obtenerProductoPorId(Long id);
 
 }

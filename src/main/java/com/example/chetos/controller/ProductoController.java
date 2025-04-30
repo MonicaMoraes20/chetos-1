@@ -85,6 +85,15 @@ public class ProductoController {
         return mv;
     }
 
+
+
+
+
+
+
+
+
+
     @RequestMapping(value="/editarProducto/{id}", method=RequestMethod.GET)
     public ModelAndView editar(@PathVariable("id") Long id) {
         ModelAndView mv = new ModelAndView("editarProducto");
@@ -131,4 +140,10 @@ public class ProductoController {
         mv.addObject("foto", productos.get().getFoto());
         return mv;
     }
+
+
+
+
+
+    
 }

@@ -141,4 +141,9 @@ public class Producto {
     public void setDetallePedidoList(List<DetallePedido> detallePedidoList) {
         this.detallePedidoList = detallePedidoList;
     }
+
+    public Producto orElse(Object object) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'orElse'");
+    }
 }

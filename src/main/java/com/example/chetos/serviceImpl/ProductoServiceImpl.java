@@ -20,11 +20,16 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     public Producto findById(long id) {
-        return productoRepository.findById(id).get();
+        return productoRepository.findById(id).orElse(null);  // Manejo adecuado del valor nulo
     }
 
     @Override
     public Producto save(Producto producto) {
         return productoRepository.save(producto);
+    }
+
+    @Override
+    public Producto obtenerProductoPorId(Long id) {
+        return productoRepository.findById(id).orElse(null);  // Implementación del método solicitado
     }
 }

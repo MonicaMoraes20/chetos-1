@@ -2304,17 +2304,18 @@ content: "\e907";
                                                   name="form_add_cart"
                                                   class="form"
                                                   method="post"
-                                                  action="https://www.espvalentina.com.br/action/cart/add"
+                                                  action="/carrito/agregar"
                                             >
 
-
+                                                <input type="hidden" name="productoId" value="${producto.id}">
                                                 <div class="product-attribute mb-5">
                                                     <div class="d-flex justify-content-between align-items-center mb-1">
                                                         <h2 class="h2 m-0">Cores</h2>
                                                     </div>
+                                                    <label for="color">Color:</label>
+                                                    <input type="text" id="color" name="color" required><br>
 
-
-                                                    <div class="d-flex flex-wrap">
+                                                    <!--<div class="d-flex flex-wrap">
 
 
                                                         <div class="product-attribute-button product-attribute-action position-relative mt-2 mr-2">
@@ -2326,7 +2327,6 @@ content: "\e907";
                                                                         name="variation_id"
                                                                         data-variation-id="24277749"
                                                                         data-variation-external-id=""
-                                                                        data-product-url="https://www.espvalentina.com.br/conjunto-kaly"
                                                                         data-variation-reference=""
                                                                 >
                                                                 <span class="text">Preto</span>
@@ -2342,8 +2342,7 @@ content: "\e907";
                                                                         required value="24277750"
                                                                         name="variation_id"
                                                                         data-variation-id="24277750"
-                                                                        data-variation-external-id=""
-                                                                        data-product-url="https://www.espvalentina.com.br/conjunto-kaly"
+                                                                        data-variation-external-id=""                                                                    
                                                                         data-variation-reference=""
                                                                 >
                                                                 <span class="text">Nude</span>
@@ -2359,19 +2358,24 @@ content: "\e907";
                                                                         required value="24277751"
                                                                         name="variation_id"
                                                                         data-variation-id="24277751"
-                                                                        data-variation-external-id=""
-                                                                        data-product-url="https://www.espvalentina.com.br/conjunto-kaly"
+                                                                        data-variation-external-id=""                                                                    
                                                                         data-variation-reference=""
                                                                 >
                                                                 <span class="text">Marrom</span>
                                                             </label>
                                                         </div>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
 
                                                 <div class="product-attribute-loader">
                                                     <span class="loader"></span>
                                                 </div>
+
+                                                <label for="talle">Talle:</label>
+                                                <input type="text" id="talle" name="talle"><br>
+
+                                                <label for="cantidad">Cantidad:</label>
+                                                <input type="number" id="cantidad" name="cantidad" min="1" required>
 
 
                                                 <div class="product-values mb-5">
@@ -2435,7 +2439,7 @@ content: "\e907";
                                                         <div class="product-action-buy-loader">
                                                             <div class="loader"></div>
                                                         </div>
-                                                        <span>Comprar</span>
+                                                        <span>Agregar al carrito</span>
                                                     </button>
 
                                                     <div style="width: 100%">

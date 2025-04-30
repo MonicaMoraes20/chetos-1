@@ -25,6 +25,19 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Venta> ventaList;
 
+
+    @Column(nullable = false)
+private String rol; // ADMIN, USER, etc.
+
+public String getRol() {
+    return rol;
+}
+
+public void setRol(String rol) {
+    this.rol = rol;
+}
+
+
     public long getId() {
         return id;
     }
